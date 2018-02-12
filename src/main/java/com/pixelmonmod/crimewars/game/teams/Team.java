@@ -5,7 +5,6 @@ import com.pixelmonmod.crimewars.game.teams.pokemon.Pokemon;
 
 import java.util.List;
 import java.util.UUID;
-import java.util.stream.Collectors;
 
 public class Team {
 
@@ -49,24 +48,6 @@ public class Team {
 		private Teams(String name, String leader) {
 			this.name = name;
 			this.leader = leader;
-		}
-
-		public void anon() {
-			String anon = "anon.";
-			List<String> out = Lists.newArrayList();
-			for(int i = 0; i < anon.length(); i++) {
-				char c = anon.charAt(i);
-				out.add("{" + c + "}");
-			}
-		}
-
-		public void head_last() {
-			List<String> filtered =
-					Lists.newArrayList("pop", "top", "suds")
-							.stream()
-							.filter(str -> str.charAt(0) == str.charAt(str.length() - 1))
-							.collect(Collectors.toList());
-
 		}
 	}
 }
